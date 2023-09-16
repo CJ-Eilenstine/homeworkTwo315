@@ -4,34 +4,32 @@ nav {
     justify-content: space-around;
     align-items: center;
 
-    .button {
-        display: inline-block;
-        cursor: pointer;
-        text-decoration: none;
-        border: 3px solid $primary-color;
-        color: $text-color;
-        padding: .5em 2em;
-        border-radius: .25em;
-    
-        position: relative;
-        isolation: isolate;
-    }
-    
-    .button::after {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        background: $primary-color;
+    .anchors {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 
-        inset: 0;
-        scale: 0 1;
-        transform-origin: right;
-        transition: scale 450ms;
+        .button {
+            @include site-button();
+        }
     }
-    
-    .button:hover::after,
-    .button:focus-visible::after {
-        transform-origin: left;
-        scale: 1 1;
+
+    .cart {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        // height: 80px;
+        margin-right: 50px;
+
+        i {
+            font-size: 30px;
+            color: $text-color;
+            padding-right: 50px
+        }
+        .button {
+            @include site-button();
+        }      
     }
 }

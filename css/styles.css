@@ -3,11 +3,11 @@
   src: url(../images/Merriweather/Merriweather-Light.ttf);
 }
 @font-face {
-  font-family: merryweather italic;
+  font-family: merryweather-italic;
   src: url(../images/Merriweather/Merriweather-Italic.ttf);
 }
 @font-face {
-  font-family: merryweather bold;
+  font-family: merryweather-bold;
   src: url(../images/Merriweather/Merriweather-Bold.ttf);
 }
 * {
@@ -27,6 +27,8 @@ h1, h2, h3, h4, h5, h6, p {
 .site-wrapper {
   min-height: 400px;
   background-color: #faebf8;
+  margin: 0 auto;
+  position: relative;
 }
 
 nav {
@@ -35,7 +37,13 @@ nav {
   justify-content: space-around;
   align-items: center;
 }
-nav .button {
+nav .anchors {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .anchors .button {
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
@@ -46,7 +54,7 @@ nav .button {
   position: relative;
   isolation: isolate;
 }
-nav .button::after {
+nav .anchors .button::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -56,8 +64,44 @@ nav .button::after {
   transform-origin: right;
   transition: scale 450ms;
 }
-nav .button:hover::after,
-nav .button:focus-visible::after {
+nav .anchors .button:hover::after, nav .anchors .button:focus-visible::after {
+  transform-origin: left;
+  scale: 1 1;
+}
+nav .cart {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+nav .cart i {
+  font-size: 30px;
+  color: #290a25;
+  padding-right: 50px;
+}
+nav .cart .button {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: 3px solid #591730;
+  color: #290a25;
+  padding: 0.5em 2em;
+  border-radius: 0.25em;
+  position: relative;
+  isolation: isolate;
+}
+nav .cart .button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #591730;
+  inset: 0;
+  scale: 0 1;
+  transform-origin: right;
+  transition: scale 450ms;
+}
+nav .cart .button:hover::after, nav .cart .button:focus-visible::after {
   transform-origin: left;
   scale: 1 1;
 }
