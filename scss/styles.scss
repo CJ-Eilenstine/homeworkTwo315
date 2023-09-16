@@ -1,0 +1,19 @@
+@font-face {
+    font-family: merryweather;
+    src: url(../images/Merriweather/Merriweather-Light.ttf);
+}
+
+@font-face {
+    font-family: merryweather italic;
+    src: url(../images/Merriweather/Merriweather-Italic.ttf);
+}
+
+@font-face {
+    font-family: merryweather bold;
+    src: url(../images/Merriweather/Merriweather-Bold.ttf);
+}
+
+@import "variables.scss";
+@import "mixins.scss";
+@import "structure.scss";
+@import "nav.scss";

@@ -1,0 +1,31 @@
+// site buttons
+@mixin site-button($p-c: $primary-color, $b-c: $background-color){
+.button {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: 3px solid $p-c;
+    color: $b-c;
+    padding: .5em 1em;
+    border-radius: .25em;
+
+    position: relative;
+    isolation: isolate;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: $p-c;
+    inset: 0;
+    scale: .5 1;
+    transition: scale 450ms;
+}
+
+.button:hover::after,
+.button:focus-visible::after {
+    scale: 1 1;
+}
+
+}

@@ -1,0 +1,37 @@
+nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .button {
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        border: 3px solid $primary-color;
+        color: $text-color;
+        padding: .5em 2em;
+        border-radius: .25em;
+    
+        position: relative;
+        isolation: isolate;
+    }
+    
+    .button::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background: $primary-color;
+
+        inset: 0;
+        scale: 0 1;
+        transform-origin: right;
+        transition: scale 450ms;
+    }
+    
+    .button:hover::after,
+    .button:focus-visible::after {
+        transform-origin: left;
+        scale: 1 1;
+    }
+}
