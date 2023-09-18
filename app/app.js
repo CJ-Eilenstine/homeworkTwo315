@@ -15,12 +15,10 @@ initURLListener();
 
 function initListeners() {
     $("nav .anchors .login").on("click", (e) => {
-        e.preventDefault();
-        let btnID = e.currentTarget.id;
-        console.log(btnID);
-        addPageContent(btnID);
-    });
-    $("nav .anchors .login").on("click", (e) => {
         e.preventDefault();        setLoggedInOut();
+        console.log("Hello")
     })
 }
+$(document).ready(function () {
+    initListeners();
+});

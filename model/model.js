@@ -29,6 +29,7 @@ export function setLoggedInOut(){
     if (loggedInOut == true){
         loggedInOut = false;
         $("nav .anchors .login").html("Log In");
+        console.log("Hello");
     }else {
         loggedInOut = true;
         $("nav .anchors .login").html("Log Out");
