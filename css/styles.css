@@ -118,4 +118,17 @@ nav .cart .button:hover::after, nav .cart .button:focus-visible::after {
   background-size: cover;
 }
 
+footer {
+  height: 75px;
+  background-color: #faebf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer i {
+  color: #290a25;
+  padding: 0 5px;
+  font-size: 20px;
+}
+
 /*# sourceMappingURL=styles.css.map */

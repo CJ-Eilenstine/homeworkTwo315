@@ -1,7 +1,11 @@
 .hero {
     position: relative;
     height: calc(100% - 80px);
-    
+    // background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),url(./images/backup-mochi-banner-web.jpg);
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed;
 
     img {
         width: 100%;
@@ -10,4 +14,19 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+}
+
+footer {
+    height: 75px;
+    background-color: $background-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        color: $text-color;
+        padding: 0 5px;
+        font-size: 20px;
+    }
+
 }
