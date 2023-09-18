@@ -18,6 +18,7 @@
 
 html, body {
   height: 100%;
+  font-family: merryweather;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -156,6 +157,7 @@ footer i {
 .flavors .flavor p {
   font-size: 30px;
   text-align: center;
+  font-family: merryweather;
 }
 
 /*# sourceMappingURL=styles.css.map */

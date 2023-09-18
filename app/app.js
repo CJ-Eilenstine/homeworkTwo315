@@ -14,7 +14,7 @@ initURLListener();
 // Login/out
 
 function initListeners() {
-    $("nav .anchors .login").on("click", (e) => {
+    $("nav .cart a").on("click", (e) => {
         e.preventDefault();        setLoggedInOut();
         console.log("Hello")
     })
