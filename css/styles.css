@@ -59,7 +59,7 @@ nav .anchors .button::after {
   content: "";
   position: absolute;
   z-index: -1;
-  background: #591730;
+  background: #eec4be;
   inset: 0;
   scale: 0 1;
   transform-origin: right;
@@ -96,7 +96,7 @@ nav .cart .button::after {
   content: "";
   position: absolute;
   z-index: -1;
-  background: #591730;
+  background: #eec4be;
   inset: 0;
   scale: 0 1;
   transform-origin: right;
